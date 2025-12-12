@@ -3,17 +3,58 @@ title: "About Me"
 about:
   id: me
   template: broadside
-  image: img/profile.png
+  image: img/ProfilePicture.png
 ---
 
 :::{#me}
 
+Collaborative and detail-oriented Data Analyst with a background in project and stakeholder management. Skilled in Python, SQL, and Tableau, translating messy datasets into actionable KPIs and insights. Led projects ranging from a media-cited national legal data analysis to a deployed NBA similarity app, driven to deliver results that inform strategy and improve decision making.
+
 ## Goals
+
+In the short term, my goal is to grow as a hands-on data scientist, building end-to-end workflows with SQL, Python or R to support business and policy decisions. Longer term, I want to work in a role where I own data products and collaborate with cross-functional teams, from domain experts to leadership, to make data a routine part of how organizations plan and measure their work.
 
 ## Education
 
+M.S. Data Analytics & Computational Social Science
+UMass Amherst 
+Amherst, MA, 2024-2025
+
+M.S. Political Science
+Suffolk University
+Boston, MA, 2018 - 2019
+
+B.A. History
+Eastern Nazarene College 
+Quincy, MA, 2013 - 2016
+
 ## Experience
+
+**Program Data Analyst – Analytics Accelerator**  
+_Remote • 08/2025 – Present_
+
+- Selected for a competitive Analytics Accelerator, applying SQL, Excel, and Tableau in a company-style workflow to scope requirements, define KPIs, and build stakeholder-ready dashboards and insight briefs.  
+- **Elist E-Commerce Dashboard:** Used SQL and Excel pivots to clean and aggregate 100K+ transactions into revenue, orders, and refund views. Delivered AOV, refund-rate, and seasonality insights that guided promotions and retention.  
+- **Row Health Operations:** Analyzed 5K+ appointment records in Excel and Tableau, building KPIs by provider type and visit category to surface scheduling bottlenecks. Findings informed operational changes that improved patient wait times and throughput.
+
+**Data Science Graduate Student – University of Massachusetts Amherst**  
+_Remote • 04/2024 – Present_
+
+- **NBA Player Similarity Finder:** Built a Streamlit + Flask app using scikit-learn on standardized per-game metrics; orchestrated an nba_api → SQLite ETL spanning 2K+ players and 13K+ player-seasons. Shipped a headshot UI with similarity scores so analysts can benchmark players and surface historical comparisons.
+
+**Pharmaceutical Communications Insights Analyst – Porter Novelli**  
+_Washington, DC • 06/2022 – 02/2023_
+
+- Managed multiple client accounts on behalf of a Fortune 500 pharmaceutical company, overseeing strategy development, thought leadership, and on-time delivery of project milestones.  
+- Launched an internal communications campaign; instrumented KPIs for site updates, messaging tests, and event integrations (company events, conferences, engagement, sentiment).
+
+**Legal and Healthcare Communications Data Analyst – Vision360 Partners**  
+_Washington, DC • 06/2018 – 06/2022_
+
+- Led key health care and legal accounts while overseeing creation of integrated communications campaigns; joined the firm as an intern and earned multiple promotions during tenure.  
+- Led national legal data analysis of 1M+ case records in Excel and SQL to surface patterns in federal cases and appeals, increasing visibility for reforms and strengthening the advocacy position.  
+- Coordinated analysis deliverables across legal, advocacy, and press teams to maintain a consistent narrative and on-time delivery of insights that supported data-driven legal reform discussions.
 
 :::
 
-Thanks for checking out my web site!
+Thanks for checking out my web site! You can check out my resume [here](https://drive.google.com/file/d/1wY3G0827zAoR6ZZkRvJDs_UpWFqc8Zbc/view?usp=sharing)!

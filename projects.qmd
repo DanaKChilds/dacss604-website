@@ -4,6 +4,8 @@ title: "Projects"
 
 ## Project 1
 
-## Project 2
+[Elist E-Commerce Project](https://github.com/DanaKChilds/Elist-eCommerce-Analysis)
 
-## Project 3
+This project analyzes four years of e-commerce orders for Elist, a digital-first electronics retailer, to guide inventory, marketing, and loyalty-program strategy. I clean and join six relational tables, then use SQL, Excel, and Power BI to quantify seasonality, product mix, refund patterns, and member vs non-member performance. The repo includes a stakeholder-ready KPI dashboard plus a machine-learning recommendation engine that uses sign-up context to generate top-K product suggestions for new customers, designed to plug into a welcome-email A/B test and improve first-order conversion.
+
+[Dashboard](dashboard.Rmd)

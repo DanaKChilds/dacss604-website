@@ -1,0 +1,71 @@
+---
+title: "Elist eCommerce Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(readxl)
+
+# Read Elist data
+elist_raw <- read_excel("C:/Users/danac/OneDrive - OneWorkplace/Documents/Elist/Elist ML Data.xlsx",
+                        sheet = "orders_data_clean")
+
+# Monthly AOV
+elist_aov_monthly <- elist_raw %>%
+  mutate(
+    order_month    = floor_date(PURCHASE_TS, "month"),
+    loyalty_status = if_else(LOYALTY_PROGRAM == 1, "Member", "Non-member")
+  ) %>%
+  group_by(order_month, loyalty_status) %>%
+  summarise(
+    aov_usd = mean(USD_PRICE, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(order_month, loyalty_status)
+```
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Member vs Non-Member AOV Over Time
+
+```{r}
+elist_aov_monthly %>%
+  ggplot(aes(x = order_month,
+             y = aov_usd,
+             color = loyalty_status)) +
+  geom_line(linewidth = 1) +
+  geom_point() +
+  labs(
+    title   = "Average Order Value: Members vs Non-Members",
+    x       = "Month",
+    y       = "Average Order Value (USD)",
+    color   = "Loyalty Status"
+  ) +
+  theme_minimal()
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### How to Read This Chart
+
+This chart compares monthly Average Order Value (AOV) for loyalty members and non-members from 2019–2022. Non-member AOV surges in 2020, then declines through 2021–2022, while member AOV is steadier. There are clear inversion windows (mid-2021 to early-2022, including Jul/Dec-2021 and Jan-2022) where member AOV meets or exceeds non-member AOV.
+
+Taken together with the order-volume patterns, this matches the project narrative: the loyalty program concentrates volume (many months where member orders meet or beat non-members) but trails on long-run AOV overall, with specific months where members out-spend non-members on a per-order basis.
+
+### Recommendations
+
+Based on these AOV and loyalty patterns, the project recommends:
+
+- **Shift more loyalty activity into Q4.** Q4 demand is the biggest seasonal spike and members match or exceed non-members on orders in peak months. Move more loyalty promos, points boosts, and reminders into Oct–Dec and track lift in member order share and the AOV gap during Q4.
+
+- **Use inversion months to close the AOV gap.** Member AOV trails in the long run ($240 vs $275), but there are clear inversion months (e.g., Jul/Dec-2021, Jan-2022) when member AOV ≥ non-member. Close the gap with member-only bundles that mirror known patterns: anchor with 27\" 4K monitors, webcams, AirPods, and MacBooks where appropriate, aiming for AOV parity.
+
+- **Make email the primary loyalty channel.** Email is the strongest revenue channel for members, especially in 2020 and 2022. Make email the main vehicle for loyalty offers with a simple cadence (launch → reminder → last-chance), backed by direct/social targeting, and A/B test subject lines, offers, and timing.

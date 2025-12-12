@@ -1,23 +1,65 @@
 [
   {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
+    "objectID": "projects.html",
+    "href": "projects.html",
     "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
+    "section": "",
+    "text": "Elist E-Commerce Project\nThis project analyzes four years of e-commerce orders for Elist, a digital-first electronics retailer, to guide inventory, marketing, and loyalty-program strategy. I clean and join six relational tables, then use SQL, Excel, and Power BI to quantify seasonality, product mix, refund patterns, and member vs non-member performance. The repo includes a stakeholder-ready KPI dashboard plus a machine-learning recommendation engine that uses sign-up context to generate top-K product suggestions for new customers, designed to plug into a welcome-email A/B test and improve first-order conversion.\nDashboard"
   },
   {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
+    "objectID": "projects.html#project-1",
+    "href": "projects.html#project-1",
     "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
+    "section": "",
+    "text": "Elist E-Commerce Project\nThis project analyzes four years of e-commerce orders for Elist, a digital-first electronics retailer, to guide inventory, marketing, and loyalty-program strategy. I clean and join six relational tables, then use SQL, Excel, and Power BI to quantify seasonality, product mix, refund patterns, and member vs non-member performance. The repo includes a stakeholder-ready KPI dashboard plus a machine-learning recommendation engine that uses sign-up context to generate top-K product suggestions for new customers, designed to plug into a welcome-email A/B test and improve first-order conversion.\nDashboard"
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
+    "title": "Elist eCommerce Dashboard",
+    "section": "",
+    "text": "elist_aov_monthly %&gt;%\n  ggplot(aes(x = order_month,\n             y = aov_usd,\n             color = loyalty_status)) +\n  geom_line(linewidth = 1) +\n  geom_point() +\n  labs(\n    title   = \"Average Order Value: Members vs Non-Members\",\n    x       = \"Month\",\n    y       = \"Average Order Value (USD)\",\n    color   = \"Loyalty Status\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "dashboard.html#column",
+    "href": "dashboard.html#column",
+    "title": "Elist eCommerce Dashboard",
+    "section": "",
+    "text": "elist_aov_monthly %&gt;%\n  ggplot(aes(x = order_month,\n             y = aov_usd,\n             color = loyalty_status)) +\n  geom_line(linewidth = 1) +\n  geom_point() +\n  labs(\n    title   = \"Average Order Value: Members vs Non-Members\",\n    x       = \"Month\",\n    y       = \"Average Order Value (USD)\",\n    color   = \"Loyalty Status\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "dashboard.html#column-1",
+    "href": "dashboard.html#column-1",
+    "title": "Elist eCommerce Dashboard",
+    "section": "Column",
+    "text": "Column\n\nHow to Read This Chart\nThis chart compares monthly Average Order Value (AOV) for loyalty members and non-members from 2019–2022. Non-member AOV surges in 2020, then declines through 2021–2022, while member AOV is steadier. There are clear inversion windows (mid-2021 to early-2022, including Jul/Dec-2021 and Jan-2022) where member AOV meets or exceeds non-member AOV.\nTaken together with the order-volume patterns, this matches the project narrative: the loyalty program concentrates volume (many months where member orders meet or beat non-members) but trails on long-run AOV overall, with specific months where members out-spend non-members on a per-order basis.\n\n\nRecommendations\nBased on these AOV and loyalty patterns, the project recommends:\n\nShift more loyalty activity into Q4. Q4 demand is the biggest seasonal spike and members match or exceed non-members on orders in peak months. Move more loyalty promos, points boosts, and reminders into Oct–Dec and track lift in member order share and the AOV gap during Q4.\nUse inversion months to close the AOV gap. Member AOV trails in the long run ($240 vs $275), but there are clear inversion months (e.g., Jul/Dec-2021, Jan-2022) when member AOV ≥ non-member. Close the gap with member-only bundles that mirror known patterns: anchor with 27\" 4K monitors, webcams, AirPods, and MacBooks where appropriate, aiming for AOV parity.\nMake email the primary loyalty channel. Email is the strongest revenue channel for members, especially in 2020 and 2022. Make email the main vehicle for loyalty offers with a simple cadence (launch → reminder → last-chance), backed by direct/social targeting, and A/B test subject lines, offers, and timing."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "About Me",
     "section": "",
-    "text": "Thanks for checking out my web site!"
+    "text": "Collaborative and detail-oriented Data Analyst with a background in project and stakeholder management. Skilled in Python, SQL, and Tableau, translating messy datasets into actionable KPIs and insights. Led projects ranging from a media-cited national legal data analysis to a deployed NBA similarity app, driven to deliver results that inform strategy and improve decision making.\n\n\nIn the short term, my goal is to grow as a hands-on data scientist, building end-to-end workflows with SQL, Python or R to support business and policy decisions. Longer term, I want to work in a role where I own data products and collaborate with cross-functional teams, from domain experts to leadership, to make data a routine part of how organizations plan and measure their work.\n\n\n\nM.S. Data Analytics & Computational Social Science UMass Amherst Amherst, MA, 2024-2025\nM.S. Political Science Suffolk University Boston, MA, 2018 - 2019\nB.A. History Eastern Nazarene College Quincy, MA, 2013 - 2016\n\n\n\nProgram Data Analyst – Analytics Accelerator\nRemote • 08/2025 – Present\n\nSelected for a competitive Analytics Accelerator, applying SQL, Excel, and Tableau in a company-style workflow to scope requirements, define KPIs, and build stakeholder-ready dashboards and insight briefs.\n\nElist E-Commerce Dashboard: Used SQL and Excel pivots to clean and aggregate 100K+ transactions into revenue, orders, and refund views. Delivered AOV, refund-rate, and seasonality insights that guided promotions and retention.\n\nRow Health Operations: Analyzed 5K+ appointment records in Excel and Tableau, building KPIs by provider type and visit category to surface scheduling bottlenecks. Findings informed operational changes that improved patient wait times and throughput.\n\nData Science Graduate Student – University of Massachusetts Amherst\nRemote • 04/2024 – Present\n\nNBA Player Similarity Finder: Built a Streamlit + Flask app using scikit-learn on standardized per-game metrics; orchestrated an nba_api → SQLite ETL spanning 2K+ players and 13K+ player-seasons. Shipped a headshot UI with similarity scores so analysts can benchmark players and surface historical comparisons.\n\nPharmaceutical Communications Insights Analyst – Porter Novelli\nWashington, DC • 06/2022 – 02/2023\n\nManaged multiple client accounts on behalf of a Fortune 500 pharmaceutical company, overseeing strategy development, thought leadership, and on-time delivery of project milestones.\n\nLaunched an internal communications campaign; instrumented KPIs for site updates, messaging tests, and event integrations (company events, conferences, engagement, sentiment).\n\nLegal and Healthcare Communications Data Analyst – Vision360 Partners\nWashington, DC • 06/2018 – 06/2022\n\nLed key health care and legal accounts while overseeing creation of integrated communications campaigns; joined the firm as an intern and earned multiple promotions during tenure.\n\nLed national legal data analysis of 1M+ case records in Excel and SQL to surface patterns in federal cases and appeals, increasing visibility for reforms and strengthening the advocacy position.\n\nCoordinated analysis deliverables across legal, advocacy, and press teams to maintain a consistent narrative and on-time delivery of insights that supported data-driven legal reform discussions.\nThanks for checking out my web site! You can check out my resume here!"
+  },
+  {
+    "objectID": "index.html#goals",
+    "href": "index.html#goals",
+    "title": "About Me",
+    "section": "",
+    "text": "In the short term, my goal is to grow as a hands-on data scientist, building end-to-end workflows with SQL, Python or R to support business and policy decisions. Longer term, I want to work in a role where I own data products and collaborate with cross-functional teams, from domain experts to leadership, to make data a routine part of how organizations plan and measure their work."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "About Me",
+    "section": "",
+    "text": "M.S. Data Analytics & Computational Social Science UMass Amherst Amherst, MA, 2024-2025\nM.S. Political Science Suffolk University Boston, MA, 2018 - 2019\nB.A. History Eastern Nazarene College Quincy, MA, 2013 - 2016"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "About Me",
+    "section": "",
+    "text": "Program Data Analyst – Analytics Accelerator\nRemote • 08/2025 – Present\n\nSelected for a competitive Analytics Accelerator, applying SQL, Excel, and Tableau in a company-style workflow to scope requirements, define KPIs, and build stakeholder-ready dashboards and insight briefs.\n\nElist E-Commerce Dashboard: Used SQL and Excel pivots to clean and aggregate 100K+ transactions into revenue, orders, and refund views. Delivered AOV, refund-rate, and seasonality insights that guided promotions and retention.\n\nRow Health Operations: Analyzed 5K+ appointment records in Excel and Tableau, building KPIs by provider type and visit category to surface scheduling bottlenecks. Findings informed operational changes that improved patient wait times and throughput.\n\nData Science Graduate Student – University of Massachusetts Amherst\nRemote • 04/2024 – Present\n\nNBA Player Similarity Finder: Built a Streamlit + Flask app using scikit-learn on standardized per-game metrics; orchestrated an nba_api → SQLite ETL spanning 2K+ players and 13K+ player-seasons. Shipped a headshot UI with similarity scores so analysts can benchmark players and surface historical comparisons.\n\nPharmaceutical Communications Insights Analyst – Porter Novelli\nWashington, DC • 06/2022 – 02/2023\n\nManaged multiple client accounts on behalf of a Fortune 500 pharmaceutical company, overseeing strategy development, thought leadership, and on-time delivery of project milestones.\n\nLaunched an internal communications campaign; instrumented KPIs for site updates, messaging tests, and event integrations (company events, conferences, engagement, sentiment).\n\nLegal and Healthcare Communications Data Analyst – Vision360 Partners\nWashington, DC • 06/2018 – 06/2022\n\nLed key health care and legal accounts while overseeing creation of integrated communications campaigns; joined the firm as an intern and earned multiple promotions during tenure.\n\nLed national legal data analysis of 1M+ case records in Excel and SQL to surface patterns in federal cases and appeals, increasing visibility for reforms and strengthening the advocacy position.\n\nCoordinated analysis deliverables across legal, advocacy, and press teams to maintain a consistent narrative and on-time delivery of insights that supported data-driven legal reform discussions."
   }
 ]
