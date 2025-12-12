@@ -3,11 +3,7 @@ title: "About Me"
 about:
   id: me
   template: broadside
-<<<<<<< HEAD
   image: img/ProfilePicture.png
-=======
-  image: img/Profile Picture.png
->>>>>>> c9799814f7d6d4bb8bf84c2f793f96eda7c26a82
 ---
 
 :::{#me}
